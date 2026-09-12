@@ -7,6 +7,10 @@ html, body {
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #ddd;
+    background-image: url('../img/bunga1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .container {
@@ -14,7 +18,7 @@ body {
     width: 900px;
     margin: 50px auto;
     padding: 30px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.9);
     gap: 30px;
 }
 
