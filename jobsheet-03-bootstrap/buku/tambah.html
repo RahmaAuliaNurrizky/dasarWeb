@@ -23,23 +23,16 @@
             <!-- elemen yang dibuka-tutup -->
             <nav class="collapse navbar-collapse" id="navMenu">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="../index.html">Beranda</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="list.html">Daftar Buku</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href=".list.html">Daftar Buku</a></li>
                     <li class="nav-item"><a class="nav-link active" href="tambah.html">Tambah Buku</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="../anggota/list.html">Daftar Anggota</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../anggota/list.html">Daftar Anggota</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     
     <main class="container my-4">
-        <section class="card shadow-sm mb-4">
-            <div class="card-body">
-                <h2 class="card-title" style="color: #d9534f;">Selamat Datang di Sistem Perpustakaan Mini</h2>
-                <p class="card-text mb-0">Aplikasi sederhana untuk mengelola data buku dan anggota perpustakaan.</p>
-            </div>
-        </section>
-
         <!-- mengganti <section> menjadi <div class="card"> -->
         <section class="card shadow-sm mb-4">
             <div class="card-body">
@@ -49,27 +42,27 @@
                 <form>
                     <div class="mb-3">
                         <label for="judul" class="form-label fw-semibold">Judul</label>
-                        <input type="text" id="judul" name="judul" required>
+                        <input type="text" class="form-control" id="judul" name="judul" required>
                     </div>
 
                     <div class="mb-3">
                         <label for="pengarang" class="form-label fw-semibold">Pengarang</label>
-                        <input type="text" id="pengarang" name="pengarang" required>
+                        <input type="text" class="form-control" id="pengarang" name="pengarang" required>
                     </div>
 
                     <div class="mb-3">
                         <label for="tahun" class="form-label fw-semibold">Tahun Terbit</label>
-                        <input type="number" id="tahun" name="tahun" required>
+                        <input type="number" class="form-control" id="tahun" name="tahun" min="1900" max="2026" required>
                     </div>
 
                     <div class="mb-3">
                         <label for="isbn" class="form-label fw-semibold">ISBN</label>
-                        <input type="text" id="isbn" name="isbn" required>
+                        <input type="text" class="form-control" id="isbn" name="isbn">
                     </div>
 
                     <div class="mb-3">
                         <label for="stok" class="form-label fw-semibold">Stok</label>
-                        <input type="number" id="stok" name="stok" min="0" required>
+                        <input type="number" class="form-control" id="stok" name="stok" min="0" required>
                     </div>
 
                     <div class="mb-3">

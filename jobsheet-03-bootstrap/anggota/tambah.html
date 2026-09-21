@@ -23,9 +23,10 @@
             <!-- elemen yang dibuka-tutup -->
             <nav class="collapse navbar-collapse" id="navMenu">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="../index.html">Beranda</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="../buku/list.html">Daftar Buku</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="list.html">Daftar Anggota</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../buku/list.html">Daftar Buku</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../buku/tambah.html">Tambah Buku</a></li>
+                    <li class="nav-item"><a class="nav-link" href="list.html">Daftar Anggota</a></li>
                     <li class="nav-item"><a class="nav-link active" href="tambah.html">Tambah Anggota</a></li>
                 </ul>
             </nav>
@@ -33,13 +34,6 @@
     </header>
 
     <main class="container my-4">
-        <section class="card shadow-sm mb-4">
-            <div class="card-body">
-                <h2 class="card-title" style="color: #d9534f;">Selamat Datang di Sistem Perpustakaan Mini</h2>
-                <p class="card-text mb-0">Aplikasi sederhana untuk mengelola data buku dan anggota perpustakaan.</p>
-            </div>
-        </section>
-
         <!-- mengganti <section> menjadi <div class="card"> -->
         <section class="card shadow-sm mb-4">
             <div class="card-body">
@@ -49,22 +43,22 @@
                 <form>
                     <div class="mb-3">
                         <label for="nama" class="form-label fw-semibold">Nama</label>
-                        <input type="text" id="nama" name="nama" required>
+                        <input type="text" class="form-control" id="nama" name="nama" required>
                     </div>
 
                     <div class="mb-3">
                         <label for="no_anggota" class="form-label fw-semibold">No. Anggota</label>
-                        <input type="text" id="no_anggota" name="no_anggota" required>
+                        <input type="text" class="form-control" id="no_anggota" name="no_anggota" required>
                     </div>
 
                     <div class="mb-3">
                         <label for="alamat" class="form-label fw-semibold">Alamat</label>
-                        <input type="text" id="alamat" name="alamat" required>
+                        <input type="text" class="form-control" id="alamat" name="alamat">
                     </div>
 
                     <div class="mb-3">
                         <label for="no_hp" class="form-label fw-semibold">No. HP</label>
-                        <input type="text" id="no_hp" name="no_hp" required>
+                        <input type="text" class="form-control" id="no_hp" name="no_hp">
                     </div>
                     <button type="submit" class="btn" style="background-color: #d9534f; color: #fff;">Simpan</button>
                 </form>
