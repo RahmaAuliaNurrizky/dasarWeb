@@ -192,10 +192,12 @@ footer {
 
 /* ==== Hamburger Menu (checkbox hack) ==== */
 .nav-toggle {
+  /* sembunyikan elemen input checkbox asli dari tampilan UI */
   display: none;
 }
 
 .nav-toggle-label {
+  /* sembunyikan tombol ikon hamburger (☰) di layar desktop/komputer */
   display: none;  /* disembunyikan di layar besar */
   font-size: 1.6rem;
   color: #fff;
@@ -204,50 +206,58 @@ footer {
 
 /* ==== Tabel Responsif ==== */
 .table-responsive {
-  overflow-x: auto;
+  /* munculkan scrollbar ke samping HANYA jika isi tabel lebih besar dari layar HP */
+  overflow-x: auto; 
 }
 
 /* ==== Responsive Breakpoints ==== */
 
-/* Tablet ke bawah */
+/* KODE KHUSUS TABLET KE BAWAH (Maksimal Lebar 768px) */
 @media (max-width: 768px) {
   main section:nth-of-type(2) {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Mobile */
+/* KODE KHUSUS HP / MOBILE (Maksimal Lebar 480px) */
 @media (max-width: 480px) {
   header {
+    /* header sbg acuan posisi utk elemen didlmnya */
     position: relative;
   }
 
   .nav-toggle-label { 
+    /* menampilkan ikon hamburger (☰) di HP */
     display: block;
   }
 
   header nav { 
+    /* menyembunyikan daftar menu secara default di HP */
     display: none;
     width: 100%;
-    order: 3;
+    order: 3; /* memindahkan posisi menu ke paling bawah didlm header */
     margin-top: 1rem;
   }
 
+  /* TRIK KUNCI: Jika checkbox dalam kondisi dicentang (di-klik ikonnya), tampilkan menu */
   .nav-toggle:checked ~ nav {
     display: block;
   }
 
   header nav ul {
+    /* mengubah susunan link menu dari mendatar menjadi menurun/vertikal */
     flex-direction: column;
     gap: 0.75rem;
   }
 
   main section:nth-of-type(2) {
+    /* mengubah kartu statistik menjadi 1 kolom saja (menumpuk ke bawah) */
     grid-template-columns: 1fr;
   }
 
   form input,
   form select {
+    /* paksa ukuran kolom input agar memenuhi lebar layar HP */
     max-width: 100%;
   }
 }
