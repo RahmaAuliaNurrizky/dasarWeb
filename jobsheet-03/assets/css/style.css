@@ -70,7 +70,7 @@ section h2 {
 /* ==== Kartu Statistik (CSS Grid) ==== */
 main section:nth-of-type(2) {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr); /* grid diubah menjadi 4 */
   gap: 1rem;
 }
 
@@ -119,7 +119,7 @@ tbody tr:nth-child(even) {
 }
 
 tbody tr:hover {
-  background-color: #c9302c;
+  background-color: #eef4fa;
 }
 
 td button {
@@ -136,13 +136,13 @@ td button:first-of-type {
   color: #fff;
 }
 
-td button:last-of-type {
+td button:nth-of-type(2) {
   background-color: #d9534f;
   color: #fff;
 }
 
-td button.detail {
-  background-color: #5bc0de;
+td button:last-of-type {
+  background-color: #d9534f;
   color: #fff;
 }
 
@@ -161,7 +161,7 @@ form label {
 form input,
 form select {
   width: 100%;
-  max-width: 400px;
+  max-width: 1000px;
   padding: 0.55rem 0.7rem;
   border: 1px solid #cdd4da;
   border-radius: 4px;
@@ -215,6 +215,7 @@ footer {
 /* KODE KHUSUS TABLET KE BAWAH (Maksimal Lebar 768px) */
 @media (max-width: 768px) {
   main section:nth-of-type(2) {
+    /* ubah kartu statistik dari 4 kolom menjadi 2 kolom (2x2) */
     grid-template-columns: repeat(2, 1fr);
   }
 }
