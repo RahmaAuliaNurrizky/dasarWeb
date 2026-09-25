@@ -55,57 +55,6 @@ function hapusError(input) {
     }
 }
 
-// function initValidasiForm() {
-//     const form = document.getElementById("form-tambah");
-//     if (!form) return;
-
-//     form.addEventListener("submit", function (e) {
-//         let valid = true;
-
-//         const judul = form.querySelector("[name='judul'], [name='nama']");
-//         if (judul && judul.value.trim() === "") {
-//             tampilkanError(judul, "Field ini wajib diisi.");
-//             valid = false;
-//         } else if (judul) {
-//             hapusError(judul);
-//         }
-
-//         const pengarang = form.querySelector("[name='pengarang']");
-//         if (pengarang && pengarang.value.trim() === "") {
-//             tampilkanError(pengarang, "Pengarang wajib diisi.");
-//             valid = false;
-//         } else if (pengarang) {
-//             hapusError(pengarang);
-//         }
-
-//         const tahun = form.querySelector("[name='tahun']");
-//         if (tahun) {
-//             const nilai = parseInt(tahun.value, 10);
-//             if (isNaN(nilai) || nilai < 1900 || nilai > 2026) {
-//                 tampilkanError(tahun, "Tahun harus di antara 1900-2026.");
-//                 valid = false;
-//             } else {
-//                 hapusError(tahun);
-//             }
-//         }
-
-//         const stok = form.querySelector("[name='stok']");
-//         if (stok) {
-//             const nilai = parseInt(stok.value, 10);
-//             if (isNaN(nilai) || nilai < 0) {
-//                 tampilkanError(stok, "Stok tidak boleh negatif.");
-//                 valid = false;
-//             } else {
-//                 hapusError(stok);
-//             }
-//         }
-
-//         if (!valid) {
-//             e.preventDefault();
-//         }
-//     });
-// }
-
 function initValidasiForm() {
     const form = document.getElementById("form-tambah");
     if (!form) return;
