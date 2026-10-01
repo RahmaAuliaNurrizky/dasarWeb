@@ -70,7 +70,7 @@ section h2 {
 /* ==== Kartu Statistik (CSS Grid) ==== */
 main section:nth-of-type(2) {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* grid diubah menjadi 4 */
+  grid-template-columns: repeat(4, 1fr); 
   gap: 1rem;
 }
 
@@ -190,19 +190,19 @@ footer {
   font-size: 0.9rem;
 }
 
-/* ==== Hamburger Menu (JS-driven) ==== */
-.nav-toggle-label {
-    display: none;
-    font-size: 1.6rem;
-    color: #fff;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
 /* ==== Tabel Responsif ==== */
 .table-responsive {
   overflow-x: auto; 
+}
+
+/* ==== Hamburger Menu (JS-driven) ==== */
+.nav-toggle-label {
+  display: none; 
+  font-size: 1.6rem;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 /* ==== Pesan Error Validasi ==== */
@@ -224,13 +224,6 @@ footer {
     padding: 0.5rem 0.75rem;
     border: 1px solid #cdd4da;
     border-radius: 4px;
-}
-
-/* ==== Teks Indikator Loading (Jobsheet 06) ==== */
-#loading-indicator {
-    margin-bottom: 1rem;
-    font-style: italic;
-    color: #55677a;
 }
 
 /* ==== Responsive Breakpoints ==== */

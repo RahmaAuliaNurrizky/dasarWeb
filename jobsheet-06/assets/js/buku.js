@@ -1,4 +1,4 @@
-// ambil data buku secara asinkron dari file JSON dan tampilkan pada tabel
+// mengambil data buku secara asinkron dari file JSON dan tampilkan pada tabel
 async function muatDaftarBuku() {
     const tbody = document.querySelector(".table-responsive table tbody");
     const loading = document.getElementById("loading-indicator");

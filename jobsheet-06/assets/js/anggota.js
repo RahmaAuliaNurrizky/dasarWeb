@@ -1,4 +1,4 @@
-// ambil data anggota secara asinkron dari file JSON dan tampilkan pada tabel
+// mengambil data anggota secara asinkron dari file JSON dan tampilkan pada tabel
 async function muatDaftarAnggota() {
     const tbody = document.querySelector(".table-responsive table tbody");
     const loading = document.getElementById("loading-indicator");
