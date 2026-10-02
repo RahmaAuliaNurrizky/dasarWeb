@@ -11,15 +11,16 @@ function initNavToggle() {
 
 // ===== Konfirmasi hapus (front-end only, belum ke server) =====
 function initHapusConfirm() {
-    document.querySelectorAll(".btn-hapus").forEach(function (btn) {
-        btn.addEventListener("click", function () {
-            const row = btn.closest("tr");
-            const nama = row ? row.querySelector("td")?.textContent : "data ini";
-            const yakin = confirm("Yakin ingin menghapus \"" + nama + "\"?");
-            if (yakin && row) {
-                row.remove();
-            }
-        });
+    document.addEventListener("click", function (e) {
+        const btn = e.target.closest(".btn-hapus");
+        if (!btn) return;
+
+        const row = btn.closest("tr");
+        const nama = row ? row.querySelector("td")?.textContent : "data ini";
+        const yakin = confirm("Yakin ingin menghapus \"" + nama + "\"?");
+        if (yakin && row) {
+            row.remove();
+        }
     });
 }
 
@@ -62,7 +63,6 @@ function initValidasiForm() {
     form.addEventListener("submit", function (e) {
         let valid = true;
 
-        // Validasi Judul / Nama
         const judul = form.querySelector("[name='judul'], [name='nama']");
         if (judul && judul.value.trim() === "") {
             tampilkanError(judul, "Field ini wajib diisi.");
@@ -71,18 +71,14 @@ function initValidasiForm() {
             hapusError(judul);
         }
 
-        // Validasi Pengarang (Hanya jika input pengarang ada di form tersebut)
         const pengarang = form.querySelector("[name='pengarang']");
-        if (pengarang) {
-            if (pengarang.value.trim() === "") {
-                tampilkanError(pengarang, "Pengarang wajib diisi.");
-                valid = false;
-            } else {
-                hapusError(pengarang);
-            }
+        if (pengarang && pengarang.value.trim() === "") {
+            tampilkanError(pengarang, "Pengarang wajib diisi.");
+            valid = false;
+        } else if (pengarang) {
+            hapusError(pengarang);
         }
 
-        // Validasi Tahun
         const tahun = form.querySelector("[name='tahun']");
         if (tahun) {
             const nilai = parseInt(tahun.value, 10);
@@ -94,7 +90,6 @@ function initValidasiForm() {
             }
         }
 
-        // Validasi Stok
         const stok = form.querySelector("[name='stok']");
         if (stok) {
             const nilai = parseInt(stok.value, 10);
@@ -107,7 +102,7 @@ function initValidasiForm() {
         }
 
         if (!valid) {
-            e.preventDefault(); // Batalkan submit jika ada error
+            e.preventDefault();
         }
     });
 }

@@ -49,7 +49,6 @@ function tampilkanError(input, pesan) {
     input.insertAdjacentElement("afterend", span);
 }
 
-// hapus pesan error jika input sudah valid
 function hapusError(input) {
     const next = input.nextElementSibling;
     if (next && next.classList.contains("error")) {
@@ -57,7 +56,6 @@ function hapusError(input) {
     }
 }
 
-// validasi formulir tambah data (Buku/Anggota)
 function initValidasiForm() {
     const form = document.getElementById("form-tambah");
     if (!form) return;
@@ -74,13 +72,11 @@ function initValidasiForm() {
         }
 
         const pengarang = form.querySelector("[name='pengarang']");
-        if (pengarang) {
-            if (pengarang.value.trim() === "") {
-                tampilkanError(pengarang, "Pengarang wajib diisi.");
-                valid = false;
-            } else {
-                hapusError(pengarang);
-            }
+        if (pengarang && pengarang.value.trim() === "") {
+            tampilkanError(pengarang, "Pengarang wajib diisi.");
+            valid = false;
+        } else if (pengarang) {
+            hapusError(pengarang);
         }
 
         const tahun = form.querySelector("[name='tahun']");

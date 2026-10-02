@@ -10,6 +10,7 @@ $errors = [];
 if ($nama === '') {
     $errors[] = "Nama wajib diisi.";
 }
+
 if ($noAnggota === '') {
     $errors[] = "No. Anggota wajib diisi.";
 }

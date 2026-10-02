@@ -29,11 +29,13 @@ $daftarBuku = $_SESSION['buku'] ?? [];
                     <th>Aksi</th>
                 </tr>
             </thead>
+
             <tbody>
                 <?php if (empty($daftarBuku)): ?>
                 <tr>
                     <td colspan="5">Belum ada data buku. Silakan tambah lewat menu "Tambah Buku".</td>
                 </tr>
+                
                 <?php else: ?>
                     <?php foreach ($daftarBuku as $buku): ?>
                     <tr>

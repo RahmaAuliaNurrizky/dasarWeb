@@ -12,21 +12,20 @@ $totalAnggota = count($_SESSION['anggota'] ?? []);
 
     <section>
         <h2>Ringkasan</h2>
+
         <article>
             <h3>Total Buku</h3>
             <p><?php echo $totalBuku; ?></p>
         </article>
+
         <article>
             <h3>Total Anggota</h3>
             <p><?php echo $totalAnggota; ?></p>
         </article>
+
         <article>
             <h3>Sedang Dipinjam</h3>
-            <p>3</p>
-        </article>
-        <article>
-            <h3>Buku Terlambat</h3>
-            <p>3</p>
+            <p>0</p>
         </article>
     </section>
 <?php include __DIR__ . '/includes/footer.php'; ?>

@@ -6,7 +6,6 @@ $flash = $_SESSION['flash'] ?? null;
 unset($_SESSION['flash']);
 $daftarAnggota = $_SESSION['anggota'] ?? [];
 ?>
-
     <section>
         <h2>Daftar Anggota</h2>
 
@@ -18,7 +17,6 @@ $daftarAnggota = $_SESSION['anggota'] ?? [];
             <label for="search-input">Cari Nama Anggota</label>
             <input type="text" id="search-input" placeholder="Ketik nama anggota...">
         </div>
-
         <div class="table-responsive">
             <table>
                 <thead>
@@ -27,7 +25,6 @@ $daftarAnggota = $_SESSION['anggota'] ?? [];
                         <th>Nama</th>
                         <th>Alamat</th>
                         <th>No. HP</th>
-                        <th>Jenis Kelamin</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
@@ -37,6 +34,7 @@ $daftarAnggota = $_SESSION['anggota'] ?? [];
                         <tr>
                             <td colspan="5">Belum ada data anggota. Silakan tambah lewat menu "Tambah Anggota".</td>
                         </tr>
+                        
                     <?php else: ?>
                         <?php foreach ($daftarAnggota as $anggota): ?>
                             <tr>
@@ -55,5 +53,4 @@ $daftarAnggota = $_SESSION['anggota'] ?? [];
             </table>
         </div>
     </section>
-
 <?php include __DIR__ . '/../includes/footer.php'; ?>
