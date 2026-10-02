@@ -35,7 +35,7 @@ $daftarBuku = $_SESSION['buku'] ?? [];
                 <tr>
                     <td colspan="5">Belum ada data buku. Silakan tambah lewat menu "Tambah Buku".</td>
                 </tr>
-                
+
                 <?php else: ?>
                     <?php foreach ($daftarBuku as $buku): ?>
                     <tr>
@@ -45,7 +45,6 @@ $daftarBuku = $_SESSION['buku'] ?? [];
                         <td><?php echo $buku['stok']; ?></td>
                         <td>
                             <button type="button">Edit</button>
-                            <button type="button">Detail</button>
                             <button type="button" class="btn-hapus">Hapus</button>
                         </td>
                     </tr>
