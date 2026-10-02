@@ -1,5 +1,6 @@
 <?php
 session_start();
+require __DIR__ . '/../includes/koneksi.php';
 
 $nama = trim($_POST['nama'] ?? '');
 $noAnggota = trim($_POST['no_anggota'] ?? '');
@@ -26,6 +27,7 @@ $stmt = $pdo->prepare(
      VALUES (:nama, :no_anggota, :alamat, :no_hp)
      RETURNING id"
 );
+
 $stmt->execute([
     'nama' => $nama,
     'no_anggota' => $noAnggota,
